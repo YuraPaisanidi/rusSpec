@@ -501,10 +501,10 @@
 	padding-bottom: 200px
 	
 	+r(992)
-		padding: 100px 0
+		padding-bottom: 100px
 
 	+r(576)
-		padding: 40px 0
+		padding-bottom: 40px
 
 	&__title
 		margin-bottom: 75px
@@ -615,10 +615,10 @@
 	padding-bottom: 180px
 
 	+r(992)
-		padding: 100px 0
+		padding-bottom: 100px
 
 	+r(576)
-		padding: 40px 0
+		padding-bottom: 40px
 
 	&__title
 		margin-bottom: 55px
@@ -801,6 +801,9 @@
 	.wrapper
 		margin-bottom: 90px
 
+	&__title
+		max-width: 680px
+
 	&__content
 		display: flex
 		justify-content: space-between
@@ -899,8 +902,87 @@
 		align-self: flex-end
 
 .footer
+	padding-bottom: 50px
+
+	+r(576)
+		padding-bottom: 15px
+
 	&__container
-		+between
+		display: flex
+		flex-direction: column
+		align-items: center
+		background: $lightBg
+		padding: 35px 10px
+
+	&__logo
+		font-family: $titleFont
+		text-transform: uppercase
+		font-size: 30px
+		color: $title
+		margin-bottom: 25px
+
+		&:hover
+			color: $title
+
+		span
+			color: $accent
+
+	&__nav
+		margin-bottom: 25px
+
+		ul
+			display: flex
+			gap: 30px
+
+			+r(576)
+				flex-direction: column
+				align-items: center
+				gap: 15px
+
+			li
+				position: relative
+
+				&::after
+					content: '/'
+					position: absolute
+					right: -15px
+
+					+r(576)
+						display: none
+
+				&:last-child
+					
+					&::after
+						display: none
+
+			a
+				color: $title
+
+				&:hover
+					color: $accent
+
+	&__links
+		@extend .contacts__data
+		justify-content: center
+		margin-bottom: 50px
+
+		+r(576)
+			margin-bottom: 30px
+
+	&__copyright
+		display: flex
+		flex-direction: column
+		align-items: center
+		color: $title
+
+		span
+
+			a
+				color: #5084D2
+				text-decoration: underline
+				cursor: pointer
+
+
 
 
 // -----MODAL-----
