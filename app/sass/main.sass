@@ -24,9 +24,6 @@
 	grid-template-columns: 200px 1fr
 
 	+r(992)
-		grid-template-columns: 150px 1fr
-
-	+r(767)
 		grid-template-columns: 1fr
 		gap: 30px
 
@@ -38,6 +35,21 @@
 	font-weight: 400
 	line-height: 130%
 
+	+r(1440)
+		font-size: 48px
+
+	+r(1200)
+		font-size: 42px
+
+	+r(767)
+		font-size: 36px
+
+	+r(576)
+		font-size: 32px
+
+	+r(480)
+		font-size: 26px
+
 .h3
 	font-family: $titleFont
 	font-size: 36px
@@ -45,7 +57,7 @@
 	color: $title
 
 	+r(576)
-		font-size: 32px
+		font-size: 28px
 
 .h4
 	font-family: $titleFont
@@ -186,6 +198,9 @@
 
 		+r(480)
 			font-size: 20px
+
+		&:hover
+			color: #fff
 		
 		span
 			color: $accent
@@ -246,9 +261,14 @@
 		img
 			width: 100%
 
+	
+
 	&__item
 		position: relative
 		+cover
+
+		+r(767)
+			height: 400px
 
 		+r(480)
 			height: 300px
@@ -260,6 +280,7 @@
 
 		&_bg
 			position: relative
+			height: 100%
 			z-index: -1
 
 			&::before
@@ -278,14 +299,36 @@
 			display: flex
 			gap: 160px
 
+			+r(1440)
+				gap: 100px
+
+			+r(1200)
+				align-items: center
+				gap: 50px
+
+			+r(992)
+				gap: 30px
+
 		&_text
 			display: flex
 			flex-direction: column
 			align-items: flex-end
 			gap: 42px
 
+			+r(992)
+				gap: 15px
+
+			+r(767)
+				align-items: center
+
 		&_img
 			min-width: 320px
+
+			+r(992)
+				min-width: 200px
+
+			+r(767)
+				display: none
 
 			img
 				object-fit: cover
@@ -294,6 +337,19 @@
 
 	&__title
 		min-width: 720px
+
+		+r(1440)
+			text-align: right
+
+		+r(1200)
+			min-width: 550px
+
+		+r(992)
+			min-width: 475px
+
+		+r(767)
+			text-align: center
+			min-width: none
 
 	&__pagination
 		position: absolute
@@ -305,6 +361,18 @@
 		align-items: center
 		justify-content: center
 		height: 30px
+
+		+r(1550)
+			left: 20px
+
+		+r(992)
+			left: 0
+
+		+r(576)
+			top: 85%
+			left: 0
+			right: 0
+			transform: none
 
 		span
 			height: 6px
@@ -324,9 +392,15 @@
 			border: 1px solid $accent
 			margin: 0 5px
 
-			+r(768)
+			+r(992)
 				height: 20px
 				width: 20px
+
+	&__btn
+
+		+r(767)
+			height: 40px
+			font-size: 14px
 
 .about
 	padding: 200px 0
@@ -417,6 +491,116 @@
 			span
 				font-size: 42px
 				color: $accent
+
+.services
+	padding-bottom: 200px
+
+	&__title
+		margin-bottom: 75px
+		max-width: 600px
+
+		+r(767)
+			margin-bottom: 30px
+
+		+r(480)
+			margin-bottom: 15px
+
+	&__block
+		display: flex
+		flex-direction: column
+
+	&__link
+		display: flex
+		justify-content: space-between
+		align-items: center
+		gap: 20px
+		padding: 15px 20px 15px 50px
+		border-top: 1px solid #c4c4c4
+		+transition
+
+		+r(992)
+			padding: 10px 15px 10px 25px
+
+		+r(576)
+			padding: 25px 10px 25px 10px
+			min-height: 100px
+
+		+r(480)
+			min-height: 120px
+
+		&:last-child
+			border-bottom: 1px solid #c4c4c4
+
+		&:hover
+			background:#E7E7F0
+			border-color: transparent
+
+			.services__more
+				opacity: 1
+
+			.services__img
+				width: 320px
+
+				+r(992)
+					width: 220px
+
+				+r(767)
+					width: 150px
+
+	&__name
+		font-size: 22px
+		font-family: $titleFont
+		color: $title
+
+		+r(992)
+			font-size: 18px
+
+		+r(576)
+			font-size: 16px
+
+	&__more
+		display: flex
+		align-items: center
+		gap: 20px
+		color: $accent
+		opacity: 0
+		+transition
+
+		+r(992)
+			font-size: 14px
+			gap: 5px
+
+		svg
+			
+			+r(992)
+				width: 30px
+
+	&__img
+		min-width: 220px
+		width: 220px
+		height: 140px
+		object-fit: cover
+		+transition
+
+		+r(992)
+			min-width: 150px
+			width: 150px
+			height: 100px
+
+		+r(767)
+			min-width: 100px
+			width: 100px
+			height: 75px
+
+		+r(576)
+			display: none
+
+		img
+			object-fit: cover
+			width: 100%
+			height: 100%
+
+
 
 .footer
 	&__container
