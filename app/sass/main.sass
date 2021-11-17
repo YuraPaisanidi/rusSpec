@@ -63,6 +63,7 @@
 	font-family: $titleFont
 	color: $accent
 	text-transform: uppercase
+	padding-top: 15px
 
 // -----BUTTON-----
 .btn
@@ -755,19 +756,147 @@
 		padding: 50px 140px 125px 105px
 		background: $lightBg
 
+		+r(992)
+			padding: 50px
+
 	&__title
 		padding-left: 100px
 		margin-bottom: 70px
+
+		+r(992)
+			margin-bottom: 30px
+			padding-left: 0
+			text-align: center
 
 	&__wrap
 		display: flex
 		justify-content: space-between
 		align-items: center
 
+		+r(992)
+			display: grid
+			grid-template-columns: 1fr 1fr
+			gap: 20px
+
+		+r(576)
+			grid-template-columns: 1fr
+
 	&__link
+		display: flex
+		align-items: center
+		justify-content: center
 
 		&:hover
 			transform: scale(1.03)
+
+.contacts
+	padding-bottom: 200px
+
+	+r(992)
+		padding-bottom: 100px
+
+	+r(576)
+		padding-bottom: 40px
+
+	.wrapper
+		margin-bottom: 90px
+
+	&__content
+		display: flex
+		justify-content: space-between
+		
+		+r(1200)
+			gap: 80px
+
+		+r(992)
+			flex-direction: column
+			align-items: center
+
+		+r(576)
+			gap: 40px
+
+	&__info
+		display: flex
+		flex-direction: column
+		gap: 35px
+		width: 50%
+		
+		+r(992)
+			width: 100%
+
+	&__item
+		display: grid
+		grid-template-columns: 100px 1fr
+		align-items: center
+		gap: 115px
+
+		+r(1200)
+			gap: 50px
+
+		+r(480)
+			gap: 15px
+			grid-template-columns: 75px 1fr
+
+		&--tel
+			align-items: flex-start
+
+	&__data
+		display: flex
+		gap: 30px
+		width: 100%
+
+		&--tel
+			flex-direction: column
+			gap: 5px
+
+		a
+			color: $title
+			font-family: $titleFont
+			font-size: 22px
+
+			+r(767)
+				font-size: 16px
+
+			svg
+				path
+					+transition
+
+			&:hover
+				color: $accent
+
+				svg
+					path
+						fill: $accent
+
+	&__form
+		display: flex
+		flex-direction: column
+		max-width: 490px
+		width: 100%
+
+		+r(992)
+			max-width: none
+
+		p
+			font-weight: 700
+			margin-bottom: 20px
+
+	&__input
+		height: 50px
+		background: $lightBg
+		border: 2px solid transparent
+		width: 100%
+		padding: 0 30px
+		color: $title
+
+		&:active,
+		&:focus
+			
+			border-color: $accent
+
+	&__btn
+		min-width: 185px
+		align-self: flex-end
 
 .footer
 	&__container
