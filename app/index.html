@@ -10,6 +10,7 @@
 	<link rel="icon" href="img/favicon.ico">
 	<!-- <meta property="og:image" content="img/preview.jpg"> -->
 	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
 	<script src="js/app.min.js" defer></script>
 
 </head>
@@ -109,7 +110,7 @@
 
 		</section>
 
-		<section class="about">
+		<section class="about wow slideInRight" data-wow-duration="0.6s" data-wow-delay="0">
 			<div class="about__container container">
 				<div class="wrapper">
 					<div class="sidebar">
@@ -165,7 +166,7 @@
 			</div>
 		</section>
 
-		<section class="services">
+		<section class="services wow slideInLeft" data-wow-duration="0.6s" data-wow-delay="0">
 			<div class="services__container container">
 				<div class="wrapper">
 					<div class="sidebar">
@@ -229,7 +230,7 @@
 			</div>
 		</section>
 
-		<section class="rent">
+		<section class="rent wow slideInRight" data-wow-duration="0.6s" data-wow-delay="0">
 			<div class="rent__container container">
 				<div class="wrapper">
 					<div class="sidebar">
@@ -323,7 +324,7 @@
 			</div>
 		</section>
 
-		<section class="clients">
+		<section class="clients wow slideInLeft" data-wow-duration="0.6s" data-wow-delay="0">
 			<div class="clients__container container">
 				<h3 class="h3 clients__title">Наши клиенты</h3>
 					<div class="clients__wrap">
@@ -343,7 +344,7 @@
 			</div>
 		</section>
 
-		<section class="contacts">
+		<section class="contacts wow slideInRight" data-wow-duration="0.6s" data-wow-delay="0">
 			<div class="contacts__container container">
 				<div class="wrapper">
 					<div class="sidebar">
@@ -456,8 +457,14 @@
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 		crossorigin="anonymous">
 	</script>
-
 	<script src="js/jquery.spincrement.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" 
+		integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" 
+		crossorigin="anonymous" referrerpolicy="no-referrer">
+	</script>
+	<script>
+new WOW().init();
+	</script>
 
 </body>
 </html>
