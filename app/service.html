@@ -59,7 +59,7 @@
 
 				<div class="service__top">
 					<h3 class="h3 service__title">Ямочный ремонт</h3>
-					<a href="#" class="service__btn btn">связаться с нами</a>
+					<a href="#" class="service__btn btn modal__edits">связаться с нами</a>
 				</div>
 			</div>
 
@@ -222,6 +222,46 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- Modal -->
+	<div class="modal modal__order" id="modal__edits">
+		<form action="#" class="modal__form form" method="POST">
+
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<h3 class="form__title">Заказать звонок</h3>
+
+			<input type="hidden" name="subject" value="Заказать звонок">
+
+			<div class="form__item">
+				<input id="formName" type="text" name="name" placeholder="Ваше имя" class="form__input _req">
+			</div>
+
+			<div class="form__item">
+				<input id="formPhone" type="tel" name="phone" placeholder="Ваш телефон" class="form__input _req">
+			</div>
+
+			<div class="form__btn">
+				<button type="submit" class="btn form__btn_button" name="submit">Отправить</button>
+			</div>
+
+		</form>
+	</div>
+
+	<div class="modal" id="modal__thanks">
+		<div class="modal__form">
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<h3>Спасибо за доверие!</h3>
+			<p>Мы обязательно с вами свяжемся!</p>
+		</div>
+	</div>
 
 	<script
 		src="https://code.jquery.com/jquery-3.6.0.min.js"

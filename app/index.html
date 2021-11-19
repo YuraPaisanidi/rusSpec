@@ -61,7 +61,7 @@
 						<div class="hero__item_content">
 							<div class="hero__item_text">
 								<h2 class="h2 hero__title">Спецтехасфальт<br> - следуйте за нами</h2>
-								<a href="#" class="btn hero__btn">Связаться с нами</a>
+								<a href="#" class="btn hero__btn modal__edits">Связаться с нами</a>
 							</div>
 							<div class="hero__item_img">
 								<img src="img/img.jpg" alt="">
@@ -75,7 +75,7 @@
 						<div class="hero__item_content">
 							<div class="hero__item_text">
 								<h2 class="h2 hero__title">Спецтехасфальт<br> - следуйте за нами</h2>
-								<a href="#" class="btn hero__btn">Связаться с нами</a>
+								<a href="#" class="btn hero__btn modal__edits">Связаться с нами</a>
 							</div>
 							<div class="hero__item_img">
 								<img src="img/img_1.jpg" alt="">
@@ -89,7 +89,7 @@
 						<div class="hero__item_content">
 							<div class="hero__item_text">
 								<h2 class="h2 hero__title">Спецтехасфальт<br> - следуйте за нами</h2>
-								<a href="#" class="btn hero__btn">Связаться с нами</a>
+								<a href="#" class="btn hero__btn modal__edits">Связаться с нами</a>
 							</div>
 							<div class="hero__item_img">
 								<img src="img/img_2.jpg" alt="">
@@ -280,7 +280,7 @@
 							</div>
 						</div>
 
-						<a href="#" class="rent__btn btn">заказать</a>
+						<a href="#" class="rent__btn btn modal__edits">заказать</a>
 					</div>
 
 					<div class="rent__img">
@@ -451,6 +451,46 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- Modal -->
+	<div class="modal modal__order" id="modal__edits">
+		<form action="#" class="modal__form form" method="POST">
+
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<h3 class="form__title">Заказать звонок</h3>
+
+			<input type="hidden" name="subject" value="Заказать звонок">
+
+			<div class="form__item">
+				<input id="formName" type="text" name="name" placeholder="Ваше имя" class="form__input _req">
+			</div>
+
+			<div class="form__item">
+				<input id="formPhone" type="tel" name="phone" placeholder="Ваш телефон" class="form__input _req">
+			</div>
+
+			<div class="form__btn">
+				<button type="submit" class="btn form__btn_button" name="submit">Отправить</button>
+			</div>
+
+		</form>
+	</div>
+
+	<div class="modal" id="modal__thanks">
+		<div class="modal__form">
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<h3>Спасибо за доверие!</h3>
+			<p>Мы обязательно с вами свяжемся!</p>
+		</div>
+	</div>
 
 	<script
 		src="https://code.jquery.com/jquery-3.6.0.min.js"
