@@ -178,11 +178,12 @@
 	top: 0
 	right: 0
 	left: 0
-	padding: 20px 0
+	padding: 15px 0
 	z-index: 100
 	+transition
 
-	&--active
+	&--active,
+	&--bg
 		background: $title
 
 	&__container
@@ -801,6 +802,11 @@
 	.wrapper
 		margin-bottom: 90px
 
+		+r(1200)
+			margin-bottom: 40px
+			grid-template-columns: 1fr
+			gap: 30px
+
 	&__title
 		max-width: 680px
 
@@ -900,6 +906,18 @@
 	&__btn
 		min-width: 185px
 		align-self: flex-end
+
+//----------------------------Contacts page--------------------
+.contacts-page
+	@extend .contacts
+	padding-top: 100px
+	margin-top: 75px
+
+	+r(1200)
+		padding-top: 50px
+
+	+r(767)
+		padding-top: 30px
 
 .footer
 	padding-bottom: 50px
